@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="15dp"
+            android:src="@color/colorPrimary"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="4dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/TextViewChild"
+        android:text="@string/user"
+        android:textSize="22sp"
+        android:textColor="@color/colorFont"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/ivAvatar"
+        android:layout_marginBottom="1dp"/>
+
+    <ImageView
+        android:id="@+id/ivUsername"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_github"
+        android:layout_marginStart="15dp"
+        android:layout_below="@id/tvName"
+        android:layout_toEndOf="@+id/ivAvatar"
+        android:layout_marginEnd="2dp" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        style="@style/TextViewChild"
+        android:layout_marginStart="4dp"
+        android:layout_below="@id/tvName"
+        android:layout_toEndOf="@+id/ivUsername"
+        android:text="@string/username"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_width="96dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/tvUsername"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/ivAvatar"
+        android:background="@drawable/btn_details" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:visibility="invisible"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/tvUsername"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/btnDetail"
+        android:background="#EB5757"
+        android:drawableStart="@drawable/ic_trash" />
+
+    <Button
+        android:id="@+id/btnShare"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/ivAvatar"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="-22dp"
+        android:text="@string/share"
+        android:textColor="@color/colorFont"
+        android:textSize="9sp"
+        tools:ignore="SmallSp" />
+</RelativeLayout>
